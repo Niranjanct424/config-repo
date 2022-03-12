@@ -1,0 +1,22 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+eureka:
+  client:
+    fetch-registry: 'true'
+    register-with-eureka: 'true'
+    serviceUrl:
+      defaultZone: http://localhost:9111/eureka/
+info:
+  environment: prod
+spring:
+  application:
+    name: rnd-api
+  boot:
+    admin:
+      client:
+        url: http://localhost:9080
+server:
+  port: '9051'
